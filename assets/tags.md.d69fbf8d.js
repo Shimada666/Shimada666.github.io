@@ -1,0 +1,1 @@
+import{_ as c,o as e,c as t,e as s}from"./app.2242b2e1.js";const _={};function n(a,r){return e(),t("h1",null,"123")}var o=c(_,[["render",n]]);const f='{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"tags.md"}',l={},p=Object.assign(l,{setup(a){return(r,i)=>(e(),t("div",null,[s(o)]))}});export{f as __pageData,p as default};

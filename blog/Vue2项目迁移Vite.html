@@ -6,8 +6,8 @@
     <title>Vue2项目迁移Vite | 鼠鼠屋 🐭</title>
     <meta name="description" content="一些简单的东西">
     <link rel="stylesheet" href="/assets/style.fd96dd7d.css">
-    <link rel="modulepreload" href="/assets/app.8bbb6e76.js">
-    <link rel="modulepreload" href="/assets/blog_Vue2项目迁移Vite.md.8db3863e.lean.js">
+    <link rel="modulepreload" href="/assets/app.2242b2e1.js">
+    <link rel="modulepreload" href="/assets/blog_Vue2项目迁移Vite.md.5d5a0d04.lean.js">
     
     <link rel="icon" href="/favicon.ico">
   <meta name="twitter:title" content="Vue2项目迁移Vite | 鼠鼠屋 🐭">
@@ -41,8 +41,8 @@ module<span class="token punctuation">.</span>exports <span class="token operato
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </code></pre></div><ol start="3"><li>使用 vite 必须库原生支持 esm 的模式。通常可以通过升级库解决。</li><li>环境变量使用方式的不同。vue-cli 中是通过 <code>process.<wbr>env.xxxx</code> 来使用环境变量，而 vite 中是通过 <code>import.<wbr>meta.env.xxxx</code> 来使用。这一点可用 <code>vite-plugin-env-compatible</code> 抹平差距。</li></ol><p>了解了以上四点。就可以开始迁移了。</p><h2 id="迁移实操" tabindex="-1">迁移实操 <a class="header-anchor" href="#迁移实操" aria-hidden="true">#</a></h2><p>在生产项目迁移时，我们通常都希望能在使用上新功能的同时，也保留旧功能，如果发生故障可以随时切换旧功能完成修复。 因此，在引入 vite 的同时保留 vue-cli 的方式就是我们迁移的重点。生产环境，安全第一。 同时，引入 vite 并不意味着我们要使用 vite 的打包功能，我们仍然可以使用 vue-cli 的打包功能，保证生产环境的稳定与兼容性。</p><h3 id="无痛迁移" tabindex="-1">无痛迁移 <a class="header-anchor" href="#无痛迁移" aria-hidden="true">#</a></h3><p>首先要介绍一款插件。<a href="https://github.com/IndexXuan/vue-cli-plugin-vite" target="_blank" rel="noopener noreferrer">vue-cli-plugin-vite</a> 这个插件可以方便我们无痛迁移 vue-cli 至 vite 并保留 vue-cli 的能力。 此插件复用了 vue.config.js，大部分配置都不需要修改。基本上可以做到开箱即用，无痛体验 vite 的启动速度。</p><h3 id="手工迁移" tabindex="-1">手工迁移 <a class="header-anchor" href="#手工迁移" aria-hidden="true">#</a></h3><p>这也是我使用的迁移方式。因为我觉得复用原有代码的方式太过丑陋，同时迁移所需的配置项也没那么多。因此我们对于上文提到的 1-4 点说一下我们是怎么做的。</p><ol><li>index.html 的迁移非常简单，创建一份 <code>index.html</code> 到根目录即可</li><li>配置文件也好解决，创建一个 <code>vite.config.ts</code> 即可</li><li>库必须是 esm 这一点，我遇到了使用的 vue-echarts 不兼容的问题。查看 github，发现把版本升级到 &gt;6.0.0 即可解决。于是按照文档升级版本后迁移至 v6 版本解决。</li><li>环境变量的问题，我直接使用了 <code>vite-plugin-env-compatible</code> 库帮助我导入所有环境变量。作为插件配置在 <code>vite.config.ts</code> 即可。</li></ol><h2 id="迁移结果" tabindex="-1">迁移结果 <a class="header-anchor" href="#迁移结果" aria-hidden="true">#</a></h2><p>迁移后，项目启动时间从 30-60 秒降至 1 秒，同时保留了原有的开发、打包方式，把风险降到了最低。至此，本文结束。</p></div></div><footer class="page-footer" data-v-0df8c27e data-v-1bc42688><div class="edit" data-v-1bc42688><div class="edit-link" data-v-1bc42688 data-v-60fa6c8f><!----></div></div><div class="updated" data-v-1bc42688><!----></div></footer><!----><!--[--><!--[--><!--]--><!--[--><!----><!--]--><!--]--></div></main></div><!----><!--]--></div></div>
-    <script>__VP_HASH_MAP__ = JSON.parse("{\"blog_buildblog.md\":\"386fe901\",\"blog_paindiary.md\":\"6fbbce82\",\"blog_springnative.md\":\"c6c15f60\",\"blog_vue2项目迁移vite.md\":\"8db3863e\",\"blog_css技巧.md\":\"74f3e996\",\"index.md\":\"a8d2aff1\",\"tags.md\":\"763a1d2d\"}")</script>
-    <script type="module" async src="/assets/app.8bbb6e76.js"></script>
+    <script>__VP_HASH_MAP__ = JSON.parse("{\"blog_buildblog.md\":\"3a54ca43\",\"blog_paindiary.md\":\"3e81a6dc\",\"blog_springnative.md\":\"f8f101d5\",\"blog_vue2项目迁移vite.md\":\"5d5a0d04\",\"blog_css技巧.md\":\"ef241ac8\",\"index.md\":\"746e3b6c\",\"tags.md\":\"d69fbf8d\"}")</script>
+    <script type="module" async src="/assets/app.2242b2e1.js"></script>
     
   </body>
 </html>
