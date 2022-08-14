@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./app.4d938e7d.js";const m='{"title":"Home","description":"","frontmatter":{"home":true,"footer":"MIT Licensed | Copyright \xA9 2021 Shimada666"},"headers":[],"relativePath":"index.md","lastUpdated":1660492787000}',o={};function r(n,s,c,d,i,p){return a(),t("div")}var f=e(o,[["render",r]]);export{m as __pageData,f as default};
