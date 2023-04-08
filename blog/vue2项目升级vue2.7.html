@@ -6,8 +6,8 @@
     <title>Vue2项目升级Vue2.7 | 鼠鼠屋 🐭</title>
     <meta name="description" content="一些简单的东西">
     <link rel="stylesheet" href="/assets/style.6b537e8f.css">
-    <link rel="modulepreload" href="/assets/app.5460741c.js">
-    <link rel="modulepreload" href="/assets/blog_vue2项目升级vue2.7.md.f6f3129f.lean.js">
+    <link rel="modulepreload" href="/assets/app.cb3751b4.js">
+    <link rel="modulepreload" href="/assets/blog_vue2项目升级vue2.7.md.b81a76f5.lean.js">
     
     <meta name="twitter:title" content="Vue2项目升级Vue2.7 | 鼠鼠屋 🐭">
   <meta property="og:title" content="Vue2项目升级Vue2.7 | 鼠鼠屋 🐭">
@@ -57,8 +57,8 @@
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </code></pre></div><h3 id="升级-vue-echarts" tabindex="-1">升级 vue-echarts <a class="header-anchor" href="#升级-vue-echarts" aria-hidden="true">#</a></h3><p>做完这些，我们发现项目使用到了新语法的页面会渲染两次。经过排查，发现是引入的 <code>vue-echarts(v6.0.2)</code> 插件有问题。</p><p>既然发现插件有问题，那么第四步，就是修复问题。我们到 vue-echarts 的 github 页面查看，发现已经有人提出了 issue，且作者给出了解决办法： 升级到 v6.2.0 版本。我们尝试升级之后，发现问题解决。查看原因是因为旧版本 vue-echarts 的依赖 vue-demi 指定了 ^0.12.x 的版本， 而 vue-demi 需要 0.13.x 才开始支持。</p><h3 id="升级-vueuse" tabindex="-1">升级 vueuse <a class="header-anchor" href="#升级-vueuse" aria-hidden="true">#</a></h3><p>做完这些之后，项目能跑起来了，但是测试发现还是有些问题。排查到是使用了 <code>vueuse</code> 的 <code>useVModel</code> 报错了。那么第五步，上github 查找 issue，发现已经有人提过且 pr 了。艾特了作者请求合并 pr，作者很快合并且 release 了新版本 v8.9.3，升级版本后成功解决问题</p><h2 id="总结" tabindex="-1">总结 <a class="header-anchor" href="#总结" aria-hidden="true">#</a></h2><p>至此，我们的项目就成功跑起来了。总的升级时间零零散散花了两天，主要还是排查问题上多耗费了些时间。但对于升级后的开发效率，这些都是值得的， vue2.7 + vite 的开发方式能极大提升开发效率与体验，让开发不再痛苦，对于有时间的朋友，非常推荐将项目升级到 vue2.7 来。</p></div></div><footer class="page-footer" data-v-0df8c27e data-v-1bc42688><div class="edit" data-v-1bc42688><div class="edit-link" data-v-1bc42688 data-v-60fa6c8f><!----></div></div><div class="updated" data-v-1bc42688><p class="last-updated" data-v-1bc42688 data-v-061fcb47><span class="prefix" data-v-061fcb47>Last Updated:</span><span class="datetime" data-v-061fcb47></span></p></div></footer><!----><!--[--><!--[--><!--]--><!--[--><!----><!--]--><!--]--></div></main></div><!----><!--]--></div></div>
-    <script>__VP_HASH_MAP__ = JSON.parse("{\"blog_buildblog.md\":\"7767e0f4\",\"blog_paindiary.md\":\"b3bf52fa\",\"blog_springboot项目规范.md\":\"61913179\",\"blog_vue2项目迁移vite.md\":\"0741332b\",\"blog_vue2项目升级vue2.7.md\":\"f6f3129f\",\"blog_低成本看电视攻略.md\":\"05dba97e\",\"blog_使用mockito帮助单测.md\":\"9d7bf22b\",\"blog_初探plantuml.md\":\"36dc200a\",\"blog_容器分析工具.md\":\"d6723ddf\",\"blog_民生银行全币种信用卡如何还款.md\":\"dd07ee67\",\"index.md\":\"3d1a0ccd\",\"tags.md\":\"ff8c7f43\"}")</script>
-    <script type="module" async src="/assets/app.5460741c.js"></script>
+    <script>__VP_HASH_MAP__ = JSON.parse("{\"blog_buildblog.md\":\"7b2e18f7\",\"blog_paindiary.md\":\"c1869784\",\"blog_springboot项目规范.md\":\"9e1eb9af\",\"blog_vue2项目迁移vite.md\":\"fb155087\",\"blog_vue2项目升级vue2.7.md\":\"b81a76f5\",\"blog_低成本看电视攻略.md\":\"691b8dc8\",\"blog_使用mockito帮助单测.md\":\"fa54723e\",\"blog_初探plantuml.md\":\"f140f185\",\"blog_容器分析工具.md\":\"b5eb8c12\",\"blog_民生银行全币种信用卡如何还款.md\":\"383b5766\",\"index.md\":\"fbcccacf\",\"tags.md\":\"852f310a\"}")</script>
+    <script type="module" async src="/assets/app.cb3751b4.js"></script>
     
   </body>
 </html>
