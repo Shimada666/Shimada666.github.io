@@ -1,0 +1,1 @@
+import{_ as c,o as e,c as t,e as s}from"./app.67cab29c.js";const _={};function n(a,r){return e(),t("h1",null,"123")}var o=c(_,[["render",n]]);const p='{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"tags.md","lastUpdated":1682303093000}',l={},f=Object.assign(l,{setup(a){return(r,d)=>(e(),t("div",null,[s(o)]))}});export{p as __pageData,f as default};
