@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>个人项目/小型团队运维devops指南 | 鼠鼠屋 🐭</title>
+    <meta name="description" content="一些简单的东西">
+    <link rel="stylesheet" href="/assets/style.b318b774.css">
+    <link rel="modulepreload" href="/assets/app.1071d033.js">
+    <link rel="modulepreload" href="/assets/blog_小型团队运维devops指南.md.6cb3d976.lean.js">
+    
+    <meta name="twitter:title" content="个人项目/小型团队运维devops指南 | 鼠鼠屋 🐭">
+  <meta property="og:title" content="个人项目/小型团队运维devops指南 | 鼠鼠屋 🐭">
+  </head>
+  <body>
+    <div id="app"><div><!--[--><div class="theme"><header class="nav-bar" data-v-1b98150f><div class="sidebar-button" data-v-1b98150f><svg class="icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z" class></path></svg></div><a class="nav-bar-title" href="/" aria-label="鼠鼠屋 🐭, back to home" data-v-1b98150f data-v-128f6faf><!----> 鼠鼠屋 🐭</a><div class="flex-grow" data-v-1b98150f></div><div class="nav" data-v-1b98150f><nav class="nav-links" data-v-1b98150f data-v-c6c99ff2><!--[--><div class="item" data-v-c6c99ff2><div class="nav-link" data-v-c6c99ff2 data-v-25960e74><a class="item" href="/" data-v-25960e74>主页 <!----></a></div></div><div class="item" data-v-c6c99ff2><div class="nav-link" data-v-c6c99ff2 data-v-25960e74><a class="item isExternal" href="https://github.com/Shimada666" target="_blank" rel="noopener noreferrer" data-v-25960e74>Github <svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15" data-v-25960e74><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div></div><!--]--><!----><!----></nav></div><!--[--><!--]--></header><aside class="sidebar" data-v-ef7edbf4><nav class="nav-links nav" data-v-ef7edbf4 data-v-c6c99ff2><!--[--><div class="item" data-v-c6c99ff2><div class="nav-link" data-v-c6c99ff2 data-v-25960e74><a class="item" href="/" data-v-25960e74>主页 <!----></a></div></div><div class="item" data-v-c6c99ff2><div class="nav-link" data-v-c6c99ff2 data-v-25960e74><a class="item isExternal" href="https://github.com/Shimada666" target="_blank" rel="noopener noreferrer" data-v-25960e74>Github <svg class="icon outbound" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewbox="0 0 100 100" width="15" height="15" data-v-25960e74><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div></div><!--]--><!----><!----></nav><!--[--><!--]--><ul class="sidebar-links" data-v-ef7edbf4><!--[--><li class="sidebar-link"><a class="sidebar-link-item" href="#项目简介">项目简介</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="#kubernetes-集群搭建">kubernetes 集群搭建</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="#新的-devops">新的 devops</a><ul class="sidebar-links"><li class="sidebar-link"><a class="sidebar-link-item" href="#_1-提交代码">1.提交代码</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="#_2-检测代码变动">2.检测代码变动</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="#_3-构建镜像">3.构建镜像</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="#_4-推送镜像">4.推送镜像</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="#_5-拉取镜像">5.拉取镜像</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="#_6-进行部署">6.进行部署</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="#_7-配置域名反代">7.配置域名反代</a><!----></li></ul></li><li class="sidebar-link"><a class="sidebar-link-item" href="#小结">小结</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="#附录">附录</a><ul class="sidebar-links"><li class="sidebar-link"><a class="sidebar-link-item" href="#jenkinsfile">jenkinsfile</a><!----></li></ul></li><!--]--></ul><!--[--><!--]--></aside><div class="sidebar-mask"></div><main class="page" data-v-0df8c27e><div class="container" data-v-0df8c27e><!--[--><!--[--><!----><!--]--><!--[--><div class="page-header style-text" data-v-73c1b0c6><div class="post-heading" data-v-73c1b0c6><div class="tags" data-v-73c1b0c6><!--[--><a class="tag" title="运维" data-v-73c1b0c6>运维</a><a class="tag" title="devops" data-v-73c1b0c6>devops</a><a class="tag" title="kubernetes" data-v-73c1b0c6>kubernetes</a><!--]--></div><h1 data-v-73c1b0c6>个人项目/小型团队运维devops指南</h1><div class="subheading" data-v-73c1b0c6></div><span class="meta" data-v-73c1b0c6>Last Updated on 2023-05-03</span></div></div><!--]--><!--]--><div style="position:relative;" class="content" data-v-0df8c27e><div><p>一直以来，我的个人项目部署都用的单机 + jenkins 的形式来实现 CICD，但使用时也渐渐发现不足。 如可移植性差、欠缺监控、部署麻烦等。且这一套过于传统，与现在先进的云原生技术有差距。 于是我决定对传统的服务方式来一个改造，跟上业界潮流，使用 kubernetes 来部署我的服务，以获得更好的体验。</p><h2 id="项目简介" tabindex="-1">项目简介 <a class="header-anchor" href="#项目简介" aria-hidden="true">#</a></h2><p>我的个人项目有前端项目、后端项目（java、python）等。在以往，前端项目是通过 jenkins 轮询代码仓库，触发流水线， 在机器上安装、构建，然后配置 nginx 来部署的。而后端项目通常用 docker 启动。做法一般是写 dockerfile 后， 到机器上去 build，然后再写个 docker-compose 文件，docker-compose down 后再 docker-compose up。 最后再在 nginx 上配个反向代理。这一套比较快，但也有些麻烦之处：</p><ul><li>前端项目使用的包管理器、node 版本不一定相同，容易出现无法安装、构建的情况。而且还要生成 nginx 的 conf 文件，麻烦。方法也比较原始。</li><li>后端项目多了不容易记住开的是哪个端口，以前开了哪些端口，要配反代也麻烦，而且镜像没地方存，只能存机器上。</li></ul><p>综上所述，我希望找到一个新的 devops 方式，来把提交代码 - 构建镜像 - 拉取镜像 - 部署这一套串起来，达到提交代码后自动更新服务的操作。</p><h2 id="kubernetes-集群搭建" tabindex="-1">kubernetes 集群搭建 <a class="header-anchor" href="#kubernetes-集群搭建" aria-hidden="true">#</a></h2><p>搭建 kubernetes 集群有两个选择：rancher、kubesphere</p><p>在开始的时候，我使用的 rancher 搭建 k8s 集群。但是不知道哪里出了问题， rancher 死活装不上集群，节点一直无法加入集群，试了好几个版本都不行，属实是浪费我时间了，另外 rancher 的文档、讨论什么的都是英文的，看的头大，于是我就把目光投向了 kubesphere。</p><p>kubesphere 安装倒是很顺利，这里必须夸一下 kubesphere 的文档，写的非常详细，直接按文档上 all in one 的方式， 一次就搭建成功了。kubesphere 自带监控报警等功能，且具有可视化的图形界面，自带 ui，白屏化的操作模式， 让我摆脱了不熟 kubectl 命令的窘迫，用起来属实是非常顺手。毕竟脱离运维有点久了，业务不熟了。</p><p>就这样，我成功把 kubernetes 集群搭建起来了，还配上了个对开发友好的 ui 界面，附带一堆功能，开箱即用，很舒服</p><h2 id="新的-devops" tabindex="-1">新的 devops <a class="header-anchor" href="#新的-devops" aria-hidden="true">#</a></h2><p>在之前，其实一直想把流程做正规点，把 jenkins + k8s 那一套用起来，苦于当时认为网上各种实践都比较麻烦，就一直没搞。 在后面逛 v 站的时候，了解到 k8s 单节点有 rancher、kubesphere 这样很方便的平台可以一键式搭建 k8s 集群，于是就决定重新试一下。</p><p>对于个人项目，我期望的是操作是：</p><ol><li>提交代码</li><li>检测到代码变动</li><li>构建镜像</li><li>推送镜像到镜像仓库</li><li>拉取镜像</li><li>进行部署</li><li>配置域名反代</li></ol><p>在原本我用的 jenkins 那一套，没有 5、6 的操作，这就导致难以多服务器部署。且配置反代也麻烦。</p><p>现在有了 kubesphere 这套方案，就可以很方便地将这些串到一起。下面讲一下每一步的细节</p><h3 id="_1-提交代码" tabindex="-1">1.提交代码 <a class="header-anchor" href="#_1-提交代码" aria-hidden="true">#</a></h3><p>提交代码，首先要有代码仓库。在这里只推荐 github。但是 github 也有一些问题，比如不挂梯子速度太慢、经常失败等。 所以为了解决这个问题，也可以用阿里云的 codeup，或者自建 gitlab 等方案，来保存我们的代码</p><h3 id="_2-检测代码变动" tabindex="-1">2.检测代码变动 <a class="header-anchor" href="#_2-检测代码变动" aria-hidden="true">#</a></h3><p>一般情况下，是可以配置 webhook 来触发流水线的。 但是，webhook 需要去 github 额外再配置一下，此外，那时候服务器刚好挂了怎么办？</p><p>所以为了解决这个问题，我还是配的流水线的定时扫描器，每一两分钟就扫描一下，发现不同了就触发流水线。</p><h3 id="_3-构建镜像" tabindex="-1">3.构建镜像 <a class="header-anchor" href="#_3-构建镜像" aria-hidden="true">#</a></h3><p>这步也是在流水线里做。流水线在拉取代码后，进行 docker build 操作。 我们可以构建镜像，然后为镜像打个 tag。</p><h3 id="_4-推送镜像" tabindex="-1">4.推送镜像 <a class="header-anchor" href="#_4-推送镜像" aria-hidden="true">#</a></h3><p>构建完镜像后，就可以推送镜像了。</p><p>但是，推送镜像到什么地方呢？有两个选择方案，一个是用公有云提供的镜像仓库，如腾讯云、阿里云的镜像仓库服务。 另一个就是自己自建 harbor 之类的镜像仓库。众所周知，自己搭建不仅麻烦，且 SLA 也无法保证，所以， 我直接选择了公有云提供的服务，毕竟，能上云的就上云，公有云提供的服务的稳定性不是个人自建所能比的。</p><p>在这一步，通过流水线里的命令，将镜像推送至腾讯云镜像仓库。</p><p>在这里还有个细节，我们一般希望保存每个构建的镜像，所以我们可以将此次构建出的镜像，再加个 latest 的 tag， 然后和原 tag 一起推送至镜像仓库。</p><h3 id="_5-拉取镜像" tabindex="-1">5.拉取镜像 <a class="header-anchor" href="#_5-拉取镜像" aria-hidden="true">#</a></h3><p>kubernetes 集群这时候会选择一台合适的服务器来部署服务。由于我们暂时只有一台机器，那么肯定就调度到这台机器上。 但是拉取镜像的行为还是要做的。我们一般会在服务里增加一个 kubernetes 配置文件，配置将拉取何镜像。 这里我们选择了使用变量的方式，使用之前的镜像名来拉取，所以我们配置文件中拉取镜像一项也要写变量名。这里要和 jenkinsfile 配合使用。 例如我就是这样的：</p><div class="language-yaml"><pre><code><span class="token comment"># deployment.yml</span>
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> apps/v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Deployment
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token comment"># 部署名字</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> pzblog
+  <span class="token key atrule">namespace</span><span class="token punctuation">:</span> corgi<span class="token punctuation">-</span>project
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">replicas</span><span class="token punctuation">:</span> <span class="token number">1</span>
+  <span class="token comment"># 用来查找关联的 Pod，所有标签都匹配才行</span>
+  <span class="token key atrule">selector</span><span class="token punctuation">:</span>
+    <span class="token key atrule">matchLabels</span><span class="token punctuation">:</span>
+      <span class="token key atrule">app</span><span class="token punctuation">:</span> pzblog
+  <span class="token comment"># 定义 Pod 相关数据</span>
+  <span class="token key atrule">template</span><span class="token punctuation">:</span>
+    <span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+      <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+        <span class="token key atrule">app</span><span class="token punctuation">:</span> pzblog
+    <span class="token key atrule">spec</span><span class="token punctuation">:</span>
+      <span class="token key atrule">imagePullSecrets</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> txcloud<span class="token punctuation">-</span>docker<span class="token punctuation">-</span>registry  <span class="token comment"># 提前在项目下配置访问腾讯云的账号密码</span>
+      <span class="token comment"># 定义容器，可以多个</span>
+      <span class="token key atrule">containers</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> pzblog <span class="token comment"># 容器名字</span>
+          <span class="token key atrule">image</span><span class="token punctuation">:</span> $REGISTRY/$DOCKERHUB_NAMESPACE/$APP_NAME<span class="token punctuation">:</span>SNAPSHOT<span class="token punctuation">-</span>$BRANCH_NAME<span class="token punctuation">-</span>$GIT_COMMIT <span class="token comment"># 配合 jenkins 使用的镜像</span>
+          <span class="token key atrule">imagePullPolicy</span><span class="token punctuation">:</span> Always
+</code></pre></div><h3 id="_6-进行部署" tabindex="-1">6.进行部署 <a class="header-anchor" href="#_6-进行部署" aria-hidden="true">#</a></h3><p>在拉取完镜像之后，我们就要开始部署。一般情况下，云原生的部署方式是用 argo cd 这样的 cd 工具来完成部署， 但是个人项目不用搞这么花里胡哨，再加上 kubesphere 集成的持续部署功能还有待完善，于是我们还是使用最传统的 kubectl 来完成部署。</p><p>一般我希望在项目下有一个 deployments 文件夹，里面有 deployment、service、ingress 三个 yml 来部署服务。 deployment 刚刚已经贴过，是用来启动容器（工作负载）的，而 service 是用来给容器暴露网络的，但是一般暴露的网络， 只能在 kubernetes 集群内访问。而 ingress 则是用来暴露域名访问的。在 ingress 文件里我们会配置一个域名， 转发域名到指定的服务上，从而完成外网的访问。这里我们贴一下 service.yml、ingress.yml 的配置</p><div class="language-yaml"><pre><code><span class="token comment"># service.yml</span>
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Service
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">namespace</span><span class="token punctuation">:</span> corgi<span class="token punctuation">-</span>project
+  <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+    <span class="token key atrule">app</span><span class="token punctuation">:</span> pzblog<span class="token punctuation">-</span>svc
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> pzblog<span class="token punctuation">-</span>svc
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">sessionAffinity</span><span class="token punctuation">:</span> None
+  <span class="token key atrule">selector</span><span class="token punctuation">:</span>
+    <span class="token key atrule">app</span><span class="token punctuation">:</span> pzblog
+  <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> http<span class="token punctuation">-</span><span class="token number">80</span>
+      <span class="token key atrule">protocol</span><span class="token punctuation">:</span> TCP
+      <span class="token key atrule">targetPort</span><span class="token punctuation">:</span> <span class="token number">80</span>
+      <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">80</span>
+</code></pre></div><div class="language-yaml"><pre><code><span class="token comment"># ingress.yml</span>
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Ingress
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> networking.k8s.io/v1
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> pzblog
+  <span class="token key atrule">namespace</span><span class="token punctuation">:</span> corgi<span class="token punctuation">-</span>project
+  <span class="token key atrule">annotations</span><span class="token punctuation">:</span>
+    <span class="token key atrule">kubesphere.io/creator</span><span class="token punctuation">:</span> admin
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">rules</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">host</span><span class="token punctuation">:</span> shimada666.corgi.plus
+      <span class="token key atrule">http</span><span class="token punctuation">:</span>
+        <span class="token key atrule">paths</span><span class="token punctuation">:</span>
+          <span class="token punctuation">-</span> <span class="token key atrule">path</span><span class="token punctuation">:</span> /
+            <span class="token key atrule">pathType</span><span class="token punctuation">:</span> ImplementationSpecific
+            <span class="token key atrule">backend</span><span class="token punctuation">:</span>
+              <span class="token key atrule">service</span><span class="token punctuation">:</span>
+                <span class="token key atrule">name</span><span class="token punctuation">:</span> pzblog<span class="token punctuation">-</span>svc
+                <span class="token key atrule">port</span><span class="token punctuation">:</span>
+                  <span class="token key atrule">number</span><span class="token punctuation">:</span> <span class="token number">80</span>
+</code></pre></div><p>而对于部署环节，我们流水线的命令是</p><div class="language-shell"><pre><code>envsubst <span class="token operator">&lt;</span> deployments/deployment.yml <span class="token operator">|</span> kubectl apply -f -
+envsubst <span class="token operator">&lt;</span> deployments/service.yml <span class="token operator">|</span> kubectl apply -f -
+envsubst <span class="token operator">&lt;</span> deployments/ingress.yml <span class="token operator">|</span> kubectl apply -f -
+</code></pre></div><p>这会自动将我们 yml 文件的变量占位符替换成流水线中指定的变量，从而进行部署。</p><h3 id="_7-配置域名反代" tabindex="-1">7.配置域名反代 <a class="header-anchor" href="#_7-配置域名反代" aria-hidden="true">#</a></h3><p>在从前，我们还要手动开反代。而现在，在部署环节，我们已经配置了 ingress，来自动将对应域名转发到我们的服务上。</p><p>至此，一个服务部署就结束了，全程都是自动作业，以后开一个新项目，只需要为项目拷贝一份 jenkinsfile 与 kubernetes 部署文件，简单修改一下，再到 kubesphere 配置一下，即可完成整套自动化构建部署的操作。</p><h2 id="小结" tabindex="-1">小结 <a class="header-anchor" href="#小结" aria-hidden="true">#</a></h2><p>这一套部署方案目前已经在好几个人项目里用上了。非常舒适。理论上，云原生部署最好结合 argo cd 来做， 而现在 jenkins 一手包办了整个 CICD 流程。最好的这一套流程大概是：</p><ol><li>提交代码</li><li>jenkins 做 ci，完成镜像构建、推送</li><li>工具修改部署镜像等信息</li><li>argo cd 来做 cd，监测到 kubernetes 配置文件发生变化，自动拉取最新镜像部署。</li></ol><p>但是 kubesphere 集成的 argo cd 目前还不完善，加上个人项目没那么多讲究，所以就先这样跑着了。 集成 argo cd 的方式，还在继续探索中，希望未来能用上。</p><h2 id="附录" tabindex="-1">附录 <a class="header-anchor" href="#附录" aria-hidden="true">#</a></h2><h3 id="jenkinsfile" tabindex="-1">jenkinsfile <a class="header-anchor" href="#jenkinsfile" aria-hidden="true">#</a></h3><div class="language-groovy"><pre><code>pipeline <span class="token punctuation">{</span>
+  agent <span class="token punctuation">{</span>
+    node <span class="token punctuation">{</span>
+      label <span class="token string">&#39;base&#39;</span>
+    <span class="token punctuation">}</span>
+
+  <span class="token punctuation">}</span>
+  stages <span class="token punctuation">{</span>
+    <span class="token function">stage</span><span class="token punctuation">(</span><span class="token string">&#39;clone code&#39;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      agent none
+      steps <span class="token punctuation">{</span>
+        <span class="token function">container</span><span class="token punctuation">(</span><span class="token string">&#39;base&#39;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token function">git</span><span class="token punctuation">(</span>url<span class="token punctuation">:</span> <span class="token string">&#39;git@github.com:Shimada666/MyBlog.git&#39;</span><span class="token punctuation">,</span> changelog<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> poll<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> credentialsId<span class="token punctuation">:</span> <span class="token string">&#39;pz-github-ssh&#39;</span><span class="token punctuation">,</span> branch<span class="token punctuation">:</span> <span class="token string">&#39;master&#39;</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">stage</span><span class="token punctuation">(</span><span class="token string">&#39;build &amp; push&#39;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      steps <span class="token punctuation">{</span>
+        <span class="token function">container</span><span class="token punctuation">(</span><span class="token string">&#39;base&#39;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          sh <span class="token string">&#39;docker build -f Dockerfile -t $REGISTRY/$DOCKERHUB_NAMESPACE/$APP_NAME:SNAPSHOT-$BRANCH_NAME-$GIT_COMMIT .&#39;</span>
+          <span class="token function">withCredentials</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token function">usernamePassword</span><span class="token punctuation">(</span>credentialsId <span class="token punctuation">:</span> <span class="token string">&#39;txcloud-docker-registry&#39;</span> <span class="token punctuation">,</span>passwordVariable <span class="token punctuation">:</span> <span class="token string">&#39;DOCKER_PASSWORD&#39;</span> <span class="token punctuation">,</span>usernameVariable <span class="token punctuation">:</span> <span class="token string">&#39;DOCKER_USERNAME&#39;</span> <span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            sh <span class="token string">&#39;echo &quot;$DOCKER_PASSWORD&quot; | docker login $REGISTRY -u &quot;$DOCKER_USERNAME&quot; --password-stdin&#39;</span>
+            sh <span class="token string">&#39;docker push  $REGISTRY/$DOCKERHUB_NAMESPACE/$APP_NAME:SNAPSHOT-$BRANCH_NAME-$GIT_COMMIT&#39;</span>
+          <span class="token punctuation">}</span>
+
+        <span class="token punctuation">}</span>
+
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">stage</span><span class="token punctuation">(</span><span class="token string">&#39;push latest&#39;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      steps <span class="token punctuation">{</span>
+        <span class="token function">container</span><span class="token punctuation">(</span><span class="token string">&#39;base&#39;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          sh <span class="token string">&#39;docker tag  $REGISTRY/$DOCKERHUB_NAMESPACE/$APP_NAME:SNAPSHOT-$BRANCH_NAME-$GIT_COMMIT $REGISTRY/$DOCKERHUB_NAMESPACE/$APP_NAME:latest &#39;</span>
+          sh <span class="token string">&#39;docker push  $REGISTRY/$DOCKERHUB_NAMESPACE/$APP_NAME:latest &#39;</span>
+        <span class="token punctuation">}</span>
+
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">stage</span><span class="token punctuation">(</span><span class="token string">&#39;deploy to production&#39;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      agent none
+      steps <span class="token punctuation">{</span>
+        <span class="token function">container</span><span class="token punctuation">(</span><span class="token string">&#39;base&#39;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token function">withCredentials</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token function">kubeconfigContent</span><span class="token punctuation">(</span>credentialsId <span class="token punctuation">:</span> <span class="token string">&#39;kubeconfig&#39;</span> <span class="token punctuation">,</span>variable <span class="token punctuation">:</span> <span class="token string">&#39;KUBECONFIG_CONFIG&#39;</span> <span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            sh <span class="token string">&#39;mkdir -p ~/.kube/&#39;</span>
+            sh <span class="token string">&#39;echo &quot;$KUBECONFIG_CONFIG&quot; &gt; ~/.kube/config&#39;</span>
+            sh <span class="token string">&#39;&#39;&#39;envsubst &lt; deployments/deployment.yml | kubectl apply -f -
+envsubst &lt; deployments/service.yml | kubectl apply -f -
+envsubst &lt; deployments/ingress.yml | kubectl apply -f -&#39;&#39;&#39;</span>
+          <span class="token punctuation">}</span>
+
+        <span class="token punctuation">}</span>
+
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+  <span class="token punctuation">}</span>
+  environment <span class="token punctuation">{</span>
+    KUBECONFIG_CREDENTIAL_ID <span class="token operator">=</span> <span class="token string">&#39;kubeconfig&#39;</span>
+    REGISTRY <span class="token operator">=</span> <span class="token string">&#39;ccr.ccs.tencentyun.com&#39;</span>
+    DOCKERHUB_NAMESPACE <span class="token operator">=</span> <span class="token string">&#39;corgi_project&#39;</span>
+    APP_NAME <span class="token operator">=</span> <span class="token string">&#39;pzblog&#39;</span>
+  <span class="token punctuation">}</span>
+  parameters <span class="token punctuation">{</span>
+    <span class="token function">string</span><span class="token punctuation">(</span>name<span class="token punctuation">:</span> <span class="token string">&#39;TAG_NAME&#39;</span><span class="token punctuation">,</span> defaultValue<span class="token punctuation">:</span> <span class="token string">&#39;&#39;</span><span class="token punctuation">,</span> description<span class="token punctuation">:</span> <span class="token string">&#39;&#39;</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div></div><footer class="page-footer" data-v-0df8c27e data-v-1bc42688><div class="edit" data-v-1bc42688><div class="edit-link" data-v-1bc42688 data-v-60fa6c8f><!----></div></div><div class="updated" data-v-1bc42688><p class="last-updated" data-v-1bc42688 data-v-061fcb47><span class="prefix" data-v-061fcb47>Last Updated:</span><span class="datetime" data-v-061fcb47></span></p></div></footer><!----><!--[--><!--[--><!--]--><!--[--><!----><!--]--><!--]--></div></main></div><!----><!--]--></div></div>
+    <script>__VP_HASH_MAP__ = JSON.parse("{\"blog_buildblog.md\":\"521b6c82\",\"blog_paindiary.md\":\"1880ec65\",\"blog_springboot项目规范.md\":\"ca584e15\",\"blog_vue2项目迁移vite.md\":\"bfb0fd0d\",\"blog_vue2项目升级vue2.7.md\":\"c2c83c74\",\"blog_低成本看电视攻略.md\":\"ee905502\",\"blog_使用mockito帮助单测.md\":\"10e1f59d\",\"blog_初探plantuml.md\":\"c450207d\",\"blog_容器分析工具.md\":\"a2f25973\",\"blog_小型团队运维devops指南.md\":\"6cb3d976\",\"blog_民生银行全币种信用卡如何还款.md\":\"d4abce4f\",\"index.md\":\"c4f992b8\",\"tags.md\":\"47cf649d\"}")</script>
+    <script type="module" async src="/assets/app.1071d033.js"></script>
+    
+  </body>
+</html>
