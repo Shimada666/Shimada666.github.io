@@ -1,0 +1,9 @@
+@use "sass:color";
+
+$brand-primary: #0085a1;
+$brand-gray: #a3a3a3;
+
+$gray-dark: color.adjust(#000, $lightness: 25%);
+$gray-light: color.adjust(#000, $lightness: 75%);
+
+$white-faded: rgba(#fff, 0.8);
