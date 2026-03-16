@@ -16,6 +16,11 @@
   "lint-staged": {
     "content/**/*.md": "node scripts/format-content.mjs"
   },
+  "pnpm": {
+    "overrides": {
+      "flatted": "3.4.1"
+    }
+  },
   "dependencies": {
     "date-fns": "^4.1.0",
     "github-slugger": "^2.0.0",
@@ -38,8 +43,8 @@
     "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "eslint": "^10.0.3",
-    "eslint-config-next": "^16.1.6",
+    "eslint": "^9",
+    "eslint-config-next": "^15.1.0",
     "lint-staged": "^15.5.0",
     "pangu": "^4.0.7",
     "simple-git-hooks": "^2.11.1",
