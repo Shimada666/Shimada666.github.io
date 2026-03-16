@@ -27,7 +27,7 @@ export default function ArticlesPage() {
             .map(([tag, count]) => (
               <a
                 key={tag}
-                href={`/tags/${encodeURIComponent(tag)}`}
+                href={`/tags/${encodeURIComponent(tag)}/`}
                 className="rounded-full px-3 py-1 text-xs font-medium transition-opacity hover:opacity-70"
                 style={{
                   background: 'var(--color-tag-bg)',

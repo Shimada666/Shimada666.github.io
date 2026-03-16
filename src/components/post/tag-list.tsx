@@ -8,7 +8,7 @@ export function TagList({ tags }: Props) {
       {tags.map((tag) => (
         <a
           key={tag}
-          href={`/tags/${encodeURIComponent(tag)}`}
+          href={`/tags/${encodeURIComponent(tag)}/`}
           className="font-mono text-xs transition-opacity hover:opacity-60"
           style={{ color: 'var(--color-fg-muted)' }}
         >
